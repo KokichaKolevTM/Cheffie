@@ -67,8 +67,10 @@ namespace Cheffie.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CookId"] = new SelectList(_context.Cook, "CookId", "CookId", post.CookId);
+            
             return View(post);
         }
+        
 
         // GET: Posts/Edit/5
         public async Task<IActionResult> Edit(int? id)
